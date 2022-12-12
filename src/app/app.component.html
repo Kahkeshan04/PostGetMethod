@@ -1,0 +1,30 @@
+<h2>Get API</h2>
+<ol>
+  <li>Vijaya</li>
+  <li>{{users.name}} - {{users.style}}</li>
+  <li>Profile</li>
+  <li>{{people.name}} - {{people.style}}</li>
+  <li>Post</li>
+  <li *ngFor="let details of postdetails">
+    {{details.title}} - {{details.author}} - {{details.age}}
+  </li>
+</ol>
+
+<br><br><br><br>
+
+<h2>Post API</h2>
+<h1>Vijaya</h1>
+<form #soumy="ngForm" (ngSubmit)="teams(soumy.value)">
+  <input type="text" ngModel name="name" placeholder="Enter name"><br><br>
+  <input type="text" ngModel name="style" placeholder="Enter style"><br><br>
+  <button>Add New User</button>
+</form>
+
+<br><br><br><br>
+
+<h1>Posts</h1>
+<form #postdata="ngForm" (ngSubmit)="post(postdata.value)">
+  <input type="text" ngModel name="title" placeholder="Enter title"><br><br>
+  <input type="text" ngModel name="author" placeholder="Enter author"><br><br>
+  <button>Add New User</button>
+</form>
